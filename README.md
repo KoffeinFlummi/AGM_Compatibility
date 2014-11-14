@@ -5,7 +5,7 @@
 AGM Compatibility Project
 =========================
 
-[![](http://img.shields.io/badge/license-GPL-red.svg)](https://github.com/KoffeinFlummi/AGM_Compatibility/blob/master/LICENSE) [![](http://img.shields.io/github/issues/KoffeinFlummi/AGM_Compatibility.svg)](https://github.com/KoffeinFlummi/AGM_Compatibility/issues)
+[![](http://img.shields.io/badge/license-GPLv2-red.svg)](https://github.com/KoffeinFlummi/AGM_Compatibility/blob/master/LICENSE) [![](http://img.shields.io/github/issues/KoffeinFlummi/AGM_Compatibility.svg)](https://github.com/KoffeinFlummi/AGM_Compatibility/issues)
 
 Various PBOs to provide compatibility of AGM with other mods.
 
