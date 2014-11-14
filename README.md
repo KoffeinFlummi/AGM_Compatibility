@@ -22,7 +22,7 @@ Various PBOs to provide compatibility of AGM with other mods.
 
 If you want to help out by adding your own mod to this, fork this repo and create a pull request. Also feel free to add yourself to the author array of any .pbo you might be editing and to the AUTHORS file.
 
-If you find a bug or want to request a feature, please use the [Issue Tracker](https://github.com/KoffeinFlummi/AGM_Compatibility/issues).
+If you find a bug or want to request a feature/mod, please use the [Issue Tracker](https://github.com/KoffeinFlummi/AGM_Compatibility/issues).
 
 You want to know how to make your weapons or vehicles compatible with AGM? Check out [this](https://github.com/KoffeinFlummi/AGM/wiki/For-Addon-Makers) page.
 
