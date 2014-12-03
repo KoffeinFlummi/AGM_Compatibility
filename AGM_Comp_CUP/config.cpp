@@ -1,9 +1,9 @@
 class CfgPatches {
-	class AGM_Comp_RHS_USF {
+	class AGM_Comp_CUP {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48, CUP_Weapons_AK, CUP_Weapons_PK, CUP_Weapons_AS50, CUP_Weapons_L85, CUP_Weapons_G36, CUP_Weapons_M107, CUP_lmg_UK59};
+		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48, CUP_Weapons_AK, CUP_Weapons_PK, CUP_Weapons_AS50, CUP_Weapons_L85, CUP_Weapons_G36, CUP_Weapons_M107, CUP_Weapons_UK59};
 		version = "1.0";
 		versionStr = "1.0";
 		versionAr[] = {1,0,0};
@@ -533,7 +533,7 @@ class CfgWeapons
 	};
 
 
-	// CUP_lmg_UK59
+	// CUP_Weapons_UK59
 	class CUP_lmg_UK59: Rifle_Long_Base_F
 	{
 		AGM_Bipod = 1;
