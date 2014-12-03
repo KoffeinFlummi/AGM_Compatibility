@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48};
+		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48, CUP_Weapons_AK, CUP_Weapons_PK, CUP_Weapons_AS50, CUP_Weapons_L85, CUP_Weapons_G36, CUP_Weapons_M107, CUP_lmg_UK59};
 		version = "1.0";
 		versionStr = "1.0";
 		versionAr[] = {1,0,0};
@@ -266,30 +266,36 @@ class CfgWeapons
 	{
 	};
 
+
 	// CUP_Weapons_L110
 	class CUP_lmg_L110A1: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
+		AGM_Bipod = 1;
 	};
 	class CUP_lmg_L110A1_Aim_Laser: CUP_lmg_L110A1
 	{
 	};
+
 
 	// CUP_Weapons_M240
 	class CUP_lmg_M240: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
 		AGM_Overheating_JamChance[] = {0, 0.00033, 0.0017, 0.0084}; //2962 MRBS
+		AGM_Bipod = 1;
 	};
 	class CUP_lmg_M240_ElcanM143: CUP_lmg_M240
 	{
 	};
+
 
 	// CUP_Weapons_M249
 	class CUP_lmg_M249_para: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
 		AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
+		AGM_Bipod = 1;
 	};
 	class CUP_lmg_M249_ElcanM145_Laser: CUP_lmg_M249_para
 	{
@@ -304,18 +310,22 @@ class CfgWeapons
 	{
 	};
 
+
 	// CUP_Weapons_M60E4
 	class CUP_lmg_M60A4: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
-		AGM_Overheating_JamChance[] = {0, 0.0012, 0.0059, 0.029}; //846 MRBS  
+		AGM_Overheating_JamChance[] = {0, 0.0012, 0.0059, 0.029}; //846 MRBS
+		AGM_Bipod = 1;
 	};
-	
+
+
 	// CUP_Weapons_Mk48
 	class CUP_lmg_Mk48_Base: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
 		AGM_Overheating_JamChance[] = {0, 0.0008, 0.002, 0.01}; //2500 MRBS
+		AGM_Bipod = 1;
 	};
 	class CUP_lmg_Mk48_des: CUP_lmg_Mk48_Base
 	{
@@ -329,4 +339,204 @@ class CfgWeapons
 	class CUP_lmg_Mk48_wdl_Aim_Laser: CUP_lmg_Mk48_wdl
 	{
 	};
+
+
+	// CUP_Weapons_AK
+	class CUP_arifle_AK_Base: Rifle_Base_F
+	{
+	};
+	class CUP_arifle_AKS_Base: CUP_arifle_AK_Base
+	{
+	};
+	class CUP_arifle_AK107_Base: CUP_arifle_AK_Base
+	{
+	};
+	class CUP_arifle_AK74: CUP_arifle_AK_Base
+	{
+	};
+	class CUP_arifle_AK107: CUP_arifle_AK107_Base
+	{
+	};
+	class CUP_arifle_AK107_GL: CUP_arifle_AK107_Base
+	{
+	};
+	class CUP_arifle_AKS74: CUP_arifle_AKS_Base
+	{
+	};
+	class CUP_arifle_AKS74U: CUP_arifle_AKS_Base
+	{
+	};
+	class CUP_arifle_AK74_GL: CUP_arifle_AK_Base
+	{
+	};
+	class CUP_arifle_AKM: CUP_arifle_AK_Base
+	{
+	};
+	class CUP_arifle_AKS: CUP_arifle_AKM
+	{
+	};
+	class CUP_arifle_AKS_Gold: CUP_arifle_AKS
+	{
+	};
+	class CUP_arifle_RPK74: CUP_arifle_AK74
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_arifle_AK107_GL_kobra: CUP_arifle_AK107_GL
+	{
+	};
+	class CUP_arifle_AK107_kobra: CUP_arifle_AK107
+	{
+	};
+	class CUP_arifle_AK107_GL_pso: CUP_arifle_AK107_GL
+	{
+	};
+	class CUP_arifle_AK107_pso: CUP_arifle_AK107
+	{
+	};
+	class CUP_arifle_AKS74_kobra: CUP_arifle_AKS74
+	{
+	};
+	class CUP_arifle_AKS74_pso: CUP_arifle_AKS74
+	{
+	};
+	class CUP_arifle_AKS74UN_kobra_snds: CUP_arifle_AKS74U
+	{
+	};
+	class CUP_arifle_AKS74_Goshawk: CUP_arifle_AKS74
+	{
+	};
+	class CUP_arifle_AKS74_NSPU: CUP_arifle_AKS74
+	{
+	};
+	class CUP_arifle_AK74_GL_kobra: CUP_arifle_AK74_GL
+	{
+	};
+
+
+	// CUP_Weapons_PK
+	class CUP_lmg_PKM: Rifle_Long_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_lmg_Pecheneg: CUP_lmg_PKM
+	{
+	};
+	class CUP_lmg_Pecheneg_PScope: CUP_lmg_Pecheneg
+	{
+	};
+
+	// CUP_Weapons_AS50
+	class CUP_srifle_AS50: Rifle_Long_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_AS50_SBPMII: CUP_srifle_AS50
+	{
+	};
+	class CUP_srifle_AS50_AMPAS13c2: CUP_srifle_AS50
+	{
+	};
+
+
+	// CUP_Weapons_L85
+	class CUP_arifle_L85A2_Base: Rifle_Base_F
+	{
+	};
+	class CUP_arifle_L85A2: CUP_arifle_L85A2_Base
+	{
+	};
+	class CUP_arifle_L85A2_GL: CUP_arifle_L85A2_Base
+	{
+	};
+	class CUP_arifle_L86A2_Base: Rifle_Base_F
+	{
+	};
+	class CUP_arifle_L86A2: CUP_arifle_L86A2_Base
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_arifle_L85A2_Holo_laser: CUP_arifle_L85A2
+	{
+	};
+	class CUP_arifle_L85A2_GL_Holo_Laser: CUP_arifle_L85A2_GL
+	{
+	};
+	class CUP_arifle_L85A2_SUSAT_Laser: CUP_arifle_L85A2
+	{
+	};
+	class CUP_arifle_L85A2_GL_SUSAT_Laser: CUP_arifle_L85A2_GL
+	{
+	};
+	class CUP_arifle_L85A2_CWS_Laser: CUP_arifle_L85A2
+	{
+	};
+	class CUP_arifle_L85A2_ACOG_Laser: CUP_arifle_L85A2
+	{
+	};
+	class CUP_arifle_L85A2_GL_ACOG_Laser: CUP_arifle_L85A2_GL
+	{
+	};
+	class CUP_arifle_L86A2_ACOG: CUP_arifle_L86A2
+	{
+	};
+
+
+	// CUP_Weapons_G36
+	class CUP_arifle_G36_Base: Rifle_Base_f
+	{
+	};
+	class CUP_arifle_G36A: CUP_arifle_G36_Base
+	{
+	};
+	class CUP_arifle_G36A_camo: CUP_arifle_G36A
+	{
+	};
+	class CUP_arifle_G36K: CUP_arifle_G36A
+	{
+	};
+	class CUP_arifle_G36K_camo: CUP_arifle_G36K
+	{
+	};
+	class CUP_arifle_G36C: Rifle_Base_f
+	{
+	};
+	class CUP_arifle_G36C_camo: CUP_arifle_G36C
+	{
+	};
+	class CUP_arifle_MG36: CUP_arifle_G36C
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_arifle_MG36_camo: CUP_arifle_MG36
+	{
+	};
+	class CUP_arifle_G36C_holo_snds: CUP_arifle_G36C
+	{
+	};
+	class CUP_arifle_G36C_camo_holo_snds: CUP_arifle_G36C_camo
+	{
+	};
+
+
+	// CUP_Weapons_M107
+	class CUP_srifle_M107_Base: Rifle_Long_Base_F
+	{
+	};
+	class CUP_srifle_M107_LeupoldVX3: CUP_srifle_M107_Base
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_M107_ANPAS13c2: CUP_srifle_M107_Base
+	{
+		AGM_Bipod = 1;
+	};
+
+
+	// CUP_lmg_UK59
+	class CUP_lmg_UK59: Rifle_Long_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+
 };
