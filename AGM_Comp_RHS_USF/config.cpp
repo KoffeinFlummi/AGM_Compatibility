@@ -153,11 +153,9 @@ class CfgWeapons {
     AGM_Overheating_allowSwapBarrel = 1;
     AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
   };
-
   class rhs_weap_m249_pip: rhs_M249_base
   {
   };
-
   class rhs_weap_m249_pip_elcan : rhs_weap_m249_pip
   {
   };
@@ -168,22 +166,19 @@ class CfgWeapons {
     AGM_Overheating_JamChance[] = {0, 0.00033, 0.0017, 0.0084}; //2962 MRBS
     AGM_Bipod = 1;
   };
-
   class rhs_weap_m240B : weap_m240_base
   {
   };
-
   class rhs_weap_m240b_elcan : rhs_weap_m240B
   {
   };
 
   class rhs_weap_m14ebrri : srifle_EBR_F
   {
+    AGM_Bipod = 1;
   };
-
   class rhs_weap_m14ebrri_leu : rhs_weap_m14ebrri
   {
-    AGM_Bipod = 1;
   };
 
 
