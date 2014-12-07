@@ -7,14 +7,13 @@ class CfgPatches {
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
-    author[] = {"KoffeinFlummi"};
+    author[] = {"KoffeinFlummi", "CAA-Picard"};
   };
 };
 
 class CfgAmmo {
   class BulletBase;
   class B_556x45_Ball;
-  class LMG_Mk200_F;
 
   // Rifle rounds
   class rhsusf_B_300winmag: BulletBase {
@@ -61,6 +60,7 @@ class CfgWeapons {
   class Rifle_Base_F;
   class Rifle_Long_Base_F;
   class srifle_EBR_F;
+  class LMG_Mk200_F;
 
   class rhs_weap_M320_Base_F: Rifle_Base_F
   {
