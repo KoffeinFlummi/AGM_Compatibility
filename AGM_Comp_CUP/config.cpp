@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48, CUP_Weapons_AK, CUP_Weapons_PK, CUP_Weapons_AS50, CUP_Weapons_L85, CUP_Weapons_G36, CUP_Weapons_M107, CUP_Weapons_UK59};
+		requiredAddons[] = {CUP_Weapons_Ammunition, CUP_Weapons_L110, CUP_Weapons_M240, CUP_Weapons_M249, CUP_Weapons_M60E4, CUP_Weapons_Mk48, CUP_Weapons_AK, CUP_Weapons_PK, CUP_Weapons_AS50, CUP_Weapons_L85, CUP_Weapons_G36, CUP_Weapons_M107, CUP_Weapons_UK59, CUP_Weapons_SCAR, CUP_Weapons_M110, CUP_Weapons_M24, CUP_Weapons_DMR, CUP_Weapons_KSVK, CUP_Weapons_L7A2};
 		version = "1.0";
 		versionStr = "1.0";
 		versionAr[] = {1,0,0};
@@ -205,58 +205,6 @@ class CfgAmmo
 	{
 		AGM_BulletMass = 12.96;    // .338 Lapua Magnum
 	};
-	class CUP_B_30mm_HE_Red_Tracer: B_30mm_HE
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_HE_Green_Tracer: B_30mm_HE
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_HE_Yellow_Tracer: B_30mm_HE
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_HE_White_Tracer: B_30mm_HE
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_AP_Red_Tracer: B_30mm_AP
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_AP_Green_Tracer: B_30mm_AP
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_AP_Yellow_Tracer: B_30mm_AP
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_30mm_AP_White_Tracer: B_30mm_AP
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_G_30mm_HE: G_40mm_HE
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_25mm_HE_White_Tracer: BulletBase
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_25mm_HE_Red_Tracer: CUP_B_25mm_HE_White_Tracer
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_25mm_HE_Green_Tracer: CUP_B_25mm_HE_White_Tracer
-	{
-		//TODO: Is this used by small arms?
-	};
-	class CUP_B_25mm_HE_Yellow_Tracer: CUP_B_25mm_HE_White_Tracer
-	{
-		//TODO: Is this used by small arms?
-	};
 };
 
 class CfgWeapons
@@ -271,6 +219,7 @@ class CfgWeapons
 	class CUP_lmg_L110A1: Rifle_Long_Base_F
 	{
 		AGM_Overheating_allowSwapBarrel = 1;
+		AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
 		AGM_Bipod = 1;
 	};
 	class CUP_lmg_L110A1_Aim_Laser: CUP_lmg_L110A1
@@ -539,4 +488,173 @@ class CfgWeapons
 		AGM_Bipod = 1;
 	};
 
+
+	// CUP_Weapons_SCAR
+	class CUP_arifle_SCAR_Base: Rifle_Base_F
+	{
+	};
+	class CUP_arifle_SCAR_L_Base: CUP_arifle_SCAR_Base
+	{
+	};
+	class CUP_arifle_Mk16_CQC: CUP_arifle_SCAR_L_Base
+	{
+	};
+	class CUP_arifle_Mk16_CQC_FG: CUP_arifle_Mk16_CQC
+	{
+	};
+	class CUP_arifle_Mk16_CQC_SFG: CUP_arifle_Mk16_CQC
+	{
+	};
+	class CUP_arifle_Mk16_CQC_EGLM: CUP_arifle_Mk16_CQC
+	{
+	};
+	class CUP_arifle_Mk16_STD: CUP_arifle_SCAR_L_Base
+	{
+	};
+	class CUP_arifle_Mk16_STD_FG: CUP_arifle_Mk16_STD
+	{
+	};
+	class CUP_arifle_Mk16_STD_SFG: CUP_arifle_Mk16_STD
+	{
+	};
+	class CUP_arifle_Mk16_STD_EGLM: CUP_arifle_Mk16_STD
+	{
+	};
+	class CUP_arifle_Mk16_SV: CUP_arifle_SCAR_L_Base
+	{
+	};
+	class CUP_arifle_Mk16_CQC_FG_Aim_Laser_snds: CUP_arifle_Mk16_CQC_FG
+	{
+	};
+	class CUP_arifle_Mk16_CQC_EGLM_Holo_Laser_mfsup: CUP_arifle_Mk16_CQC_EGLM
+	{
+	};
+	class CUP_arifle_Mk16_CQC_SFG_Holo: CUP_arifle_Mk16_CQC_SFG
+	{
+	};
+	class CUP_arifle_Mk16_STD_EGLM_ACOG_Laser: CUP_arifle_Mk16_STD_EGLM
+	{
+	};
+	class CUP_arifle_Mk16_STD_EGLM_ANPAS13c1_Laser_mfsup: CUP_arifle_Mk16_STD_EGLM
+	{
+	};
+	class CUP_arifle_Mk16_STD_FG_Holo_Laser: CUP_arifle_Mk16_STD_FG
+	{
+	};
+	class CUP_arifle_Mk16_STD_FG_LeupoldMk4CQT_Laser: CUP_arifle_Mk16_STD_FG
+	{
+	};
+	class CUP_arifle_Mk17_Base: CUP_arifle_SCAR_Base
+	{
+	};
+	class CUP_arifle_Mk17_CQC: CUP_arifle_Mk17_Base
+	{
+	};
+	class CUP_arifle_Mk17_CQC_FG: CUP_arifle_Mk17_CQC
+	{
+	};
+	class CUP_arifle_Mk17_CQC_SFG: CUP_arifle_Mk17_CQC_FG
+	{
+	};
+	class CUP_arifle_Mk17_CQC_EGLM: CUP_arifle_Mk17_CQC
+	{
+	};
+	class CUP_arifle_Mk17_STD: CUP_arifle_Mk17_Base
+	{
+	};
+	class CUP_arifle_Mk17_STD_FG: CUP_arifle_Mk17_STD
+	{
+	};
+	class CUP_arifle_Mk17_STD_SFG: CUP_arifle_Mk17_STD_FG
+	{
+	};
+	class CUP_arifle_Mk17_STD_EGLM: CUP_arifle_Mk17_STD
+	{
+	};
+	class CUP_arifle_Mk20: CUP_arifle_Mk17_Base
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_arifle_Mk17_CQC_SFG_Aim_mfsup: CUP_arifle_Mk17_CQC_SFG
+	{
+	};
+	class CUP_arifle_Mk17_STD_FG_Aim_Laser_snds: CUP_arifle_Mk17_CQC_FG
+	{
+	};
+	class CUP_arifle_Mk17_STD_EGL_ElcanSpecter_Laser: CUP_arifle_Mk17_CQC_EGLM
+	{
+	};
+	class CUP_arifle_Mk17_STD_FG_ANPAS13c1_Laser_Snds: CUP_arifle_Mk17_STD_FG
+	{
+	};
+	class CUP_arifle_Mk20_LeupoldMk4MRT: CUP_arifle_Mk20
+	{
+	};
+	class CUP_arifle_Mk20_SB11420_snds: CUP_arifle_Mk20
+	{
+	};
+
+
+	// CUP_Weapons_M110
+	class CUP_srifle_M110: Rifle_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_M110_ANPAS13c2: CUP_srifle_M110
+	{
+	};
+	class CUP_srifle_M110_ANPVS10: CUP_srifle_M110
+	{
+	};
+
+
+	// CUP_Weapons_M24
+	class CUP_srifle_M24_des: Rifle_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_M24_wdl: CUP_srifle_M24_des
+	{
+	};
+	class CUP_srifle_M24_ghillie: CUP_srifle_M24_des
+	{
+	};
+	class CUP_srifle_M40A3: CUP_srifle_M24_ghillie
+	{
+	};
+	class CUP_srifle_M24_des_LeupoldMk4LRT: CUP_srifle_M24_des
+	{
+	};
+	class CUP_srifle_M24_wdl_LeupoldMk4LRT: CUP_srifle_M24_wdl
+	{
+	};
+
+
+	// CUP_Weapons_DMR
+	class CUP_srifle_DMR: Rifle_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_DMR_LeupoldMk4: CUP_srifle_DMR
+	{
+	};
+
+
+	// CUP_Weapons_KSVK
+	class CUP_srifle_ksvk: Rifle_Base_F
+	{
+		AGM_Bipod = 1;
+	};
+	class CUP_srifle_ksvk_PSO3: CUP_srifle_ksvk
+	{
+	};
+
+
+	// CUP_Weapons_L7A2
+	class CUP_lmg_L7A2: Rifle_Long_Base_F
+	{
+		AGM_Overheating_allowSwapBarrel = 1;
+		AGM_Overheating_JamChance[] = {0, 0.00033, 0.0017, 0.0084}; //2962 MRBS
+		AGM_Bipod = 1;
+	};
 };
