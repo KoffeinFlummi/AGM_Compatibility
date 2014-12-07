@@ -60,3 +60,115 @@ class CfgAmmo {
   {
   };
 };
+
+class CfgWeapons {
+  class Rifle_Base_F;
+
+  class rhs_weap_ak74m_Base_F: Rifle_Base_F
+  {
+  };
+  class rhs_weap_ak74m : rhs_weap_ak74m_Base_F
+  {
+  };
+  class rhs_weap_ak74m_pkas : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_pso1m2 : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_1p29 : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_camo : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_folded : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_2mag : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_2mag_camo : rhs_weap_ak74m_2mag
+  {
+  };
+  class rhs_weap_ak74m_camo_pkas : rhs_weap_ak74m_camo
+  {
+  };
+  class rhs_weap_ak74m_camo_pso1m2 : rhs_weap_ak74m_camo
+  {
+  };
+  class rhs_weap_ak74m_camo_1p29 : rhs_weap_ak74m_camo
+  {
+  };
+  class rhs_weap_ak74m_desert : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74m_gp25 : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74 : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_ak74_gp25 : rhs_weap_ak74m_gp25
+  {
+  };
+  class rhs_weap_aks74 : rhs_weap_ak74
+  {
+  };
+  class rhs_weap_aks74u : rhs_weap_aks74
+  {
+  };
+
+  class rhs_weap_akm : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_akms : rhs_weap_akm
+  {
+  };
+
+  class rhs_weap_svd : rhs_weap_ak74m
+  {
+  };
+  class rhs_weap_svd_pso1 : rhs_weap_svd
+  {
+  };
+  class rhs_weap_svdp : rhs_weap_svd
+  {
+  };
+  class rhs_weap_svdp_wd : rhs_weap_svdp
+  {
+  };
+  class rhs_weap_svds : rhs_weap_svdp
+  {
+  };
+  class rhs_weap_svdp_pso1 : rhs_weap_svdp
+  {
+  };
+  class rhs_weap_svds_pso1 : rhs_weap_svds
+  {
+  };
+
+  class Rifle_Long_Base_F: Rifle_Base_F {};
+
+  class rhs_pkp_base: Rifle_Long_Base_F
+  {
+    AGM_Bipod = 1;
+  };
+
+  class rhs_weap_pkp: rhs_pkp_base
+  {
+  };
+
+  class rhs_weap_pkm: rhs_weap_pkp
+  {
+    AGM_Bipod = 1;
+  };
+
+  class rhs_weap_rpk74m: rhs_weap_pkp
+  {
+    AGM_Bipod = 1;
+  };
+  class rhs_weap_rpk74: rhs_weap_rpk74m
+  {
+  };
+};
