@@ -73,6 +73,7 @@ class CfgWeapons {
   class arifle_MX_Base_F: Rifle_Base_F {};
   class rhs_weap_m4_Base : arifle_MX_Base_F
   {
+    AGM_Overheating_JamChance[] = {0, 0.00027, 0.0014, 0.0069}; //3600 MRBS
   };
   class rhs_weap_m4 : rhs_weap_m4_Base
   {
@@ -117,6 +118,7 @@ class CfgWeapons {
 
   class rhs_weap_m16a4 : rhs_weap_m4_Base
   {
+    AGM_Overheating_JamChance[] = {0, 0.00052, 0.0026, 0.013}; //1924 MRBS
   };
 
   class rhs_weap_m16a4_carryhandle : rhs_weap_m4_Base
@@ -148,6 +150,8 @@ class CfgWeapons {
 
   class rhs_M249_base : LMG_Mk200_F
   {
+    AGM_Overheating_allowSwapBarrel = 1;
+    AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
   };
 
   class rhs_weap_m249_pip: rhs_M249_base
@@ -160,6 +164,8 @@ class CfgWeapons {
 
   class weap_m240_base : rhs_M249_base
   {
+    AGM_Overheating_allowSwapBarrel = 1;
+    AGM_Overheating_JamChance[] = {0, 0.00033, 0.0017, 0.0084}; //2962 MRBS
     AGM_Bipod = 1;
   };
 
