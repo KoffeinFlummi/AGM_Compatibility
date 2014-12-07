@@ -11,6 +11,50 @@ class CfgPatches {
   };
 };
 
+class CfgAmmo {
+  class BulletBase;
+  class B_556x45_Ball;
+
+  // Rifle rounds
+  class rhsusf_B_300winmag: BulletBase {
+  {
+    AGM_BulletMass = 10.7;     // .300 Winchester Magnum GMX
+  };
+
+
+  class rhs_ammo_556x45_M855A1_Ball : B_556x45_Ball
+  {
+  };
+  class rhs_ammo_556x45_M855A1_Ball_Red : rhs_ammo_556x45_M855A1_Ball
+  {
+  };
+  class rhs_ammo_556x45_M855A1_Ball_Green : rhs_ammo_556x45_M855A1_Ball_Red
+  {
+  };
+  class rhs_ammo_556x45_M855A1_Ball_Yellow : rhs_ammo_556x45_M855A1_Ball_Red
+  {
+  };
+
+  class rhs_ammo_556x45_Mk318_Ball : B_556x45_Ball
+  {
+  };
+  class rhs_ammo_556x45_Mk262_Ball : B_556x45_Ball
+  {
+  };
+
+  class rhsammo_762x51_Ball: BulletBase
+  {
+    AGM_BulletMass = 10;      // 7.62x51 NATO
+  };
+
+  // Shotgun rounds
+  class B_12Gauge_Pellets;
+  class rhs_ammo_m576_buckshot: B_12Gauge_Pellets
+  {
+    AGM_BulletMass = 4;     // Grams of pellets; TODO: review
+  };
+};
+
 class CfgWeapons {
   class InventoryOpticsItem_Base_F;
 
