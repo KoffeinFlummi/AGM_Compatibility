@@ -14,6 +14,7 @@ class CfgPatches {
 class CfgAmmo {
   class BulletBase;
   class B_556x45_Ball;
+  class LMG_Mk200_F;
 
   // Rifle rounds
   class rhsusf_B_300winmag: BulletBase {
@@ -56,6 +57,131 @@ class CfgAmmo {
 };
 
 class CfgWeapons {
+
+  class Rifle_Base_F;
+  class Rifle_Long_Base_F;
+  class srifle_EBR_F;
+
+  class rhs_weap_M320_Base_F: Rifle_Base_F
+  {
+  };
+
+  class rhs_weap_M320 : rhs_weap_M320_Base_F
+  {
+  };
+
+  class arifle_MX_Base_F: Rifle_Base_F {};
+  class rhs_weap_m4_Base : arifle_MX_Base_F
+  {
+  };
+  class rhs_weap_m4 : rhs_weap_m4_Base
+  {
+  };
+  class rhs_m4_compm4 : rhs_weap_m4
+  {
+  };
+  class rhs_m4_acog : rhs_weap_m4
+  {
+  };
+  class rhs_m4_acog2 : rhs_weap_m4
+  {
+  };
+  class rhs_m4_acog3 : rhs_weap_m4
+  {
+  };
+  class rhs_weap_m4_carryhandle : rhs_weap_m4_Base
+  {
+  };
+  class rhs_weap_m4a1 : rhs_weap_m4_Base
+  {
+  };
+  class rhs_weap_m4_grip : rhs_weap_m4_Base
+  {
+  };
+
+  class rhs_m4_grip_compm4 : rhs_weap_m4_grip
+  {
+  };
+  class rhs_m4_grip_acog : rhs_weap_m4_grip
+  {
+  };
+  class rhs_m4_grip_acog2 : rhs_weap_m4_grip
+  {
+  };
+  class rhs_m4_grip_acog3 : rhs_weap_m4_grip
+  {
+  };
+  class rhs_weap_m4a1_grip : rhs_weap_m4a1
+  {
+  };
+
+  class rhs_weap_m16a4 : rhs_weap_m4_Base
+  {
+  };
+
+  class rhs_weap_m16a4_carryhandle : rhs_weap_m4_Base
+  {
+  };
+  class rhs_weap_m16a4_grip : rhs_weap_m4_Base
+  {
+  };
+
+  class rhs_m4_m320 : rhs_weap_m4_Base
+  {
+  };
+  class rhs_m4_m320_compm4 : rhs_m4_m320
+  {
+  };
+  class rhs_m4_m320_acog : rhs_m4_m320
+  {
+  };
+  class rhs_m4_m320_acog2 : rhs_m4_m320
+  {
+  };
+  class rhs_m4_m320_acog3 : rhs_m4_m320
+  {
+  };
+
+  class rhs_m4a1_m320 : rhs_weap_m4_Base
+  {
+  };
+
+  class rhs_M249_base : LMG_Mk200_F
+  {
+  };
+
+  class rhs_weap_m249_pip: rhs_M249_base
+  {
+  };
+
+  class rhs_weap_m249_pip_elcan : rhs_weap_m249_pip
+  {
+  };
+
+  class weap_m240_base : rhs_M249_base
+  {
+    AGM_Bipod = 1;
+  };
+
+  class rhs_weap_m240B : weap_m240_base
+  {
+  };
+
+  class rhs_weap_m240b_elcan : rhs_weap_m240B
+  {
+  };
+
+  class rhs_weap_m14ebrri : srifle_EBR_F
+  {
+  };
+
+  class rhs_weap_m14ebrri_leu : rhs_weap_m14ebrri
+  {
+    AGM_Bipod = 1;
+  };
+
+
+  // Optics
   class InventoryOpticsItem_Base_F;
 
   class rhsusf_acc_sniper_base;
