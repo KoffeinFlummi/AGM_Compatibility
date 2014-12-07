@@ -16,7 +16,7 @@ class CfgAmmo {
   class B_556x45_Ball;
 
   // Rifle rounds
-  class rhsusf_B_300winmag: BulletBase {
+  class rhsusf_B_300winmag: BulletBase
   {
     AGM_BulletMass = 10.7;     // .300 Winchester Magnum GMX
   };
@@ -152,6 +152,7 @@ class CfgWeapons {
   {
     AGM_Overheating_allowSwapBarrel = 1;
     AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
+    AGM_Bipod = 0;
   };
   class rhs_weap_m249_pip: rhs_M249_base
   {
