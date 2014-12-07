@@ -41,7 +41,7 @@ class CfgAmmo
 	};
 	class HLC_762x39_Ball: HLC_300Blackout_Ball
 	{
-		AGM_BulletMass = 7.9;      // 7.62x39 FMJ
+		AGM_BulletMass = 7.9;      // 7.62x39 57-N-231
 	};
 	class HLC_762x39_Tracer: HLC_762x39_Ball
 	{

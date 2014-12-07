@@ -44,7 +44,7 @@ class CfgAmmo
 	};
 	class CUP_B_762x39_Ball: BulletBase
 	{
-		AGM_BulletMass = 7.9;      // 7.62x39 FMJ
+		AGM_BulletMass = 7.9;      // 7.62x39 57-N-231
 	};
 	class CUP_B_762x39_Ball_Tracer_Green: BulletBase
 	{
@@ -92,7 +92,7 @@ class CfgAmmo
 	};
 	class CUP_B_762x54_Ball_White_Tracer: BulletBase
 	{
-		AGM_BulletMass = 11.7;    // 7.62x54 FMJ
+		AGM_BulletMass = 9.6;     // 7.62x54 57-N-323S
 	};
 	class CUP_B_762x54_Ball_Red_Tracer: CUP_B_762x54_Ball_White_Tracer
 	{
