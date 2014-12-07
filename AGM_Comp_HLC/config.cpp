@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {hlcweapons_core};
+		requiredAddons[] = {hlcweapons_core, hlcweapons_m60e4, hlcweapons_aks, hlcweapons_ar15, hlcweapons_m14};
 		version = "1.0";
 		versionStr = "1.0";
 		versionAr[] = {1,0,0};
@@ -187,5 +187,120 @@ class CfgWeapons
 	};
 
 
-	// ***
+	// hlcweapons_m60e4
+	class hlc_M60e4_base: Rifle_Base_F
+	{
+		AGM_Overheating_allowSwapBarrel = 1;
+		AGM_Overheating_JamChance[] = {0, 0.0012, 0.0059, 0.029}; //846 MRBS
+		AGM_Bipod = 1;
+	};
+	class hlc_lmg_M60E4: hlc_M60e4_base
+	{
+	};
+	class hlc_lmg_m60: hlc_M60e4_base
+	{
+	};
+
+
+	// hlcweapons_aks
+	class hlc_ak_base: Rifle_Base_F
+	{
+	};
+	class hlc_rifle_ak74: hlc_ak_base
+	{
+	};
+	class hlc_rifle_ak74_dirty: hlc_rifle_ak74
+	{
+	};
+	class hlc_rifle_aks74: hlc_rifle_ak74
+	{
+	};
+	class hlc_rifle_ak12: hlc_rifle_aks74
+	{
+	};
+	class hlc_rifle_aks74u: hlc_rifle_ak74
+	{
+	};
+	class hlc_rifle_ak47: hlc_rifle_ak74
+	{
+	};
+	class hlc_rifle_akm: hlc_rifle_ak47
+	{
+	};
+	class hlc_rifle_akmgl: hlc_rifle_akm
+	{
+	};
+	class hlc_rifle_rpk: hlc_rifle_ak47
+	{
+		AGM_Bipod = 1;
+	};
+	class hlc_rifle_aks74_GL: hlc_rifle_aks74
+	{
+	};
+	class hlc_rifle_aek971: hlc_rifle_ak74
+	{
+	};
+	class hlc_rifle_saiga12k: hlc_rifle_ak47
+	{
+	};
+
+
+	// hlcweapons_ar15
+	class hlc_ar15_base: Rifle_Base_F
+	{
+	};
+	class hlc_rifle_RU556: hlc_ar15_base
+	{
+	};
+	class hlc_rifle_RU5562: hlc_rifle_RU556
+	{
+	};
+	class hlc_rifle_bcmjack: hlc_ar15_base
+	{
+	};
+	class hlc_rifle_Colt727: hlc_ar15_base
+	{
+	};
+	class hlc_rifle_Colt727_GL: hlc_rifle_Colt727
+	{
+	};
+	class hlc_rifle_Bushmaster300: hlc_rifle_Colt727
+	{
+	};
+	class hlc_rifle_vendimus: hlc_rifle_Bushmaster300
+	{
+	};
+	class hlc_rifle_SAMR: hlc_rifle_RU556
+	{
+		AGM_Bipod = 1;
+	};
+	class hlc_rifle_samr2: hlc_rifle_SAMR
+	{
+	};
+	class hlc_rifle_honeybase: hlc_rifle_RU556
+	{
+	};
+	class hlc_rifle_honeybadger: hlc_rifle_honeybase
+	{
+	};
+
+
+	// hlcweapons_m14
+	class hlc_M14_base: Rifle_Base_F
+	{
+	};
+	class hlc_rifle_M14: hlc_M14_base
+	{
+	};
+	class hlc_rifle_M21: hlc_M14_base
+	{
+		AGM_Bipod = 1;
+	};
+	class hlc_rifle_m14dmr: hlc_rifle_M21
+	{
+		AGM_Bipod = 1;
+	};
+	class hlc_rifle_m14sopmod: hlc_rifle_M14
+	{
+	};
 };
