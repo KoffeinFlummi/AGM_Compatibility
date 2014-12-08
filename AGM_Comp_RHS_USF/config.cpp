@@ -102,6 +102,7 @@ class CfgWeapons {
 
   class rhs_m4_grip_compm4 : rhs_weap_m4_grip
   {
+    AGM_Bipod = 1;
   };
   class rhs_m4_grip_acog : rhs_weap_m4_grip
   {
@@ -114,6 +115,7 @@ class CfgWeapons {
   };
   class rhs_weap_m4a1_grip : rhs_weap_m4a1
   {
+    AGM_Bipod = 1;
   };
 
   class rhs_weap_m16a4 : rhs_weap_m4_Base
@@ -126,6 +128,7 @@ class CfgWeapons {
   };
   class rhs_weap_m16a4_grip : rhs_weap_m4_Base
   {
+    AGM_Bipod = 1;
   };
 
   class rhs_m4_m320 : rhs_weap_m4_Base
