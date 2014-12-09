@@ -173,7 +173,7 @@ class cfgWeapons {
     descriptionShort = "$STR_AGM_Disposable_UsedTubeDescription";
     magazines[] = {"AGM_UsedTube_F"};
     weaponPoolAvailable = 0;
-  }:
+  };
 
   class LIB_RPzB : Launcher {
     AGM_Backblast_Angle = 60;
