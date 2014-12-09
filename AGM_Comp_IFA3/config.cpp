@@ -123,6 +123,9 @@ class cfgWeapons {
   class LIB_MG42 : LIB_LMG {
     AGM_Bipod = 1;
     AGM_Overheating_allowSwapBarrel = 1;
+    AGM_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.003};
+    AGM_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+    AGM_Overheating_JamChance[] = {0, 0, 0.004, 0.02}
   };
 
   // CSW variant
