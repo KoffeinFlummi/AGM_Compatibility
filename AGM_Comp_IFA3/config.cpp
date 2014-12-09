@@ -20,8 +20,8 @@ class cfgWeapons {
     AGM_Overheating_allowSwapBarrel = 1;
   };
 
+  // CSW variant
   class LIB_MLMG42: LIB_MLMG {
-    // CSW variant
     AGM_Bipod = 0;
     AGM_Overheating_allowSwapBarrel = 1;
   };
@@ -48,6 +48,69 @@ class cfgWeapons {
     AGM_Backblast_Angle = 60;
     AGM_Backblast_Range = 15;
     AGM_Backblast_Damage = 0.7;
+  };
+
+  // IS-2
+  class LIB_D25T: CannonCore
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // T-34-85
+  class LIB_ZIS_S_53: CannonCore
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // T-34-76
+  class LIB_F34: CannonCore
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // SU-85
+  class LIB_D_5S: LIB_ZIS_S_53
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // PzKpfw VI Ausf.B + PzKpfw VI Ausf.E
+  class LIB_KwK36_L56: CannonCore
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // PzKpfw VI Ausf.H
+  class LIB_KwK40_L48: CannonCore {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // PzKpfw V Ausf.A Panther
+  class LIB_KwK42_L70: CannonCore
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // StuG III Ausf.g
+  class LIB_StuK40_L48: LIB_KwK40_L48
+  {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
   };
 };
 
