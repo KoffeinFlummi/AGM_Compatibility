@@ -11,7 +11,42 @@ class CfgPatches {
   };
 };
 
-class CfgAmmo {
+class cfgAmmo {
+  class BulletBase;
+
+  class B_9x18_Ball: BulletBase{};
+
+  class LIB_B_9x19_Ball: B_9x18_Ball {
+//    AGM_BulletMass = ; // 9×19mm Parabellum
+  };
+
+  class B_792x57_Ball: BulletBase {
+//    AGM_BulletMass = ; // 7.92×57mm
+  };
+
+  class B_792x33_Ball: BulletBase {
+//    AGM_BulletMass = ; // 7.92×33mm Kurz
+  };
+
+  class B_762x25_Ball: BulletBase {
+//    AGM_BulletMass = ; // 7.62×25mm Tokarev
+  };
+
+  class LIB_B_762x54_Ball: BulletBase {
+//    AGM_BulletMass = ; // 7.62x54R
+  };
+
+  class B_762x63_Ball: BulletBase {
+//    AGM_BulletMass = ; // .30-06 Springfield AKA 7.62x63
+  };
+
+  class B_762x33_Ball: B_762x63_Ball {
+//    AGM_BulletMass = ; // .30 Carbine AKA 7.62x33
+  };
+
+  class B_127x99_Ball: BulletBase {
+//    AGM_BulletMass = ; // .50 BMG AKA 12.7×99mm NATO
+  };
 };
 
 class cfgWeapons {
@@ -239,6 +274,13 @@ class cfgWeapons {
 
   // SU-85
   class LIB_D_5S : LIB_ZIS_S_53 {
+    AGM_DangerZone_Angle = 90;
+    AGM_DangerZone_Range = 50;
+    AGM_DangerZone_Damage = 0.85;
+  };
+
+  // M4A3(75)
+  class LIB_M3_L40: CannonCore {
     AGM_DangerZone_Angle = 90;
     AGM_DangerZone_Range = 50;
     AGM_DangerZone_Damage = 0.85;
