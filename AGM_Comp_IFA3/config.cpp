@@ -305,4 +305,10 @@ class cfgVehicles {
   class LIB_GER_pilot : LIB_GER_soldier_base {
   	AGM_GForceCoef = 0.75;
   };
+
+  class LIB_US_Soldier_Base;
+  class LIB_US_pilot: LIB_US_Soldier_Base {
+    AGM_GForceCoef = 0.75;
+  }
+
 };
