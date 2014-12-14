@@ -1,9 +1,9 @@
 class CfgPatches {
-	class AGM_Comp_HLC {
+	class AGM_Comp_HLC_Core {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {hlcweapons_core, hlcweapons_m60e4, hlcweapons_aks, hlcweapons_ar15, hlcweapons_m14};
+		requiredAddons[] = {hlcweapons_core};
 		version = "1.0";
 		versionStr = "1.0";
 		versionAr[] = {1,0,0};
@@ -81,18 +81,18 @@ class CfgAmmo
 	};
 	class HLC_792x57_Ball: HLC_303Brit_B
 	{
-		AGM_BulletMass = 12.8;    // 7.92×57 Mauser RWS ID Classic
+		AGM_BulletMass = 12.8;    // 7.92x57 Mauser RWS ID Classic
 	};
 	class HLC_792x57_Tracer: HLC_792x57_Ball
 	{
 	};
 	class HLC_792x57_AP: HLC_792x57_Ball
 	{
-		AGM_BulletMass = 11.7;    // 7.92×57 Mauser RWS DK
+		AGM_BulletMass = 11.7;    // 7.92x57 Mauser RWS DK
 	};
 	class HLC_542x42_ball: HLC_303Brit_B
 	{
-		AGM_BulletMass = 10.5;    // 6.5×52 Carcano RN
+		AGM_BulletMass = 10.5;    // 6.5x52 Carcano RN
 	};
 	class HLC_542x42_Tracer: HLC_303Brit_B
 	{
@@ -114,15 +114,15 @@ class CfgAmmo
 	};
 	class HLC_57x28mm_JHP: FH_545x39_Ball
 	{
-		AGM_BulletMass = 2;        // FN 5.7×28 SS195LF JHP
+		AGM_BulletMass = 2;        // FN 5.7x28 SS195LF JHP
 	};
 	class HLC_57x28mm_FMJ: HLC_57x28mm_JHP
 	{
-		AGM_BulletMass = 2;        // FN 5.7×28 SS190 AP FMJ
+		AGM_BulletMass = 2;        // FN 5.7x28 SS190 AP FMJ
 	};
 	class HLC_9x19_Ball: B_556x45_Ball
 	{
-		AGM_BulletMass = 7.45;     // 9×19mm Parabellum
+		AGM_BulletMass = 7.45;     // 9x19mm Parabellum
 	};
 	class HLC_9x19_M882_SMG: B_556x45_Ball
 	{
@@ -134,7 +134,7 @@ class CfgAmmo
 	};
 	class HLC_9x19_Subsonic: HLC_9x19_Ball
 	{
-		AGM_BulletMass = 7.45;     // 9×19mm Parabellum
+		AGM_BulletMass = 7.45;     // 9x19mm Parabellum
 	};
 	class HLC_10mm_FMJ: HLC_9x19_Ball
 	{
@@ -172,135 +172,9 @@ class CfgAmmo
 	};
 	class FH_50BMG_SLAP: B_127x99_Ball
 	{
-		AGM_BulletMass = 42;      // 12.7×99mm NATO (.50 BMG)
+		AGM_BulletMass = 42;      // 12.7x99mm NATO (.50 BMG)
 	};
 	class FH_50BMG_Raufoss: B_127x99_Ball
-	{
-	};
-};
-
-class CfgWeapons
-{
-	class Rifle_Base_F;
-	class Rifle_Long_Base_F: Rifle_Base_F
-	{
-	};
-
-
-	// hlcweapons_m60e4
-	class hlc_M60e4_base: Rifle_Base_F
-	{
-		AGM_Overheating_allowSwapBarrel = 1;
-		AGM_Overheating_JamChance[] = {0, 0.0012, 0.0059, 0.029}; //846 MRBS
-		AGM_Bipod = 1;
-	};
-	class hlc_lmg_M60E4: hlc_M60e4_base
-	{
-	};
-	class hlc_lmg_m60: hlc_M60e4_base
-	{
-	};
-
-
-	// hlcweapons_aks
-	class hlc_ak_base: Rifle_Base_F
-	{
-	};
-	class hlc_rifle_ak74: hlc_ak_base
-	{
-	};
-	class hlc_rifle_ak74_dirty: hlc_rifle_ak74
-	{
-	};
-	class hlc_rifle_aks74: hlc_rifle_ak74
-	{
-	};
-	class hlc_rifle_ak12: hlc_rifle_aks74
-	{
-	};
-	class hlc_rifle_aks74u: hlc_rifle_ak74
-	{
-	};
-	class hlc_rifle_ak47: hlc_rifle_ak74
-	{
-	};
-	class hlc_rifle_akm: hlc_rifle_ak47
-	{
-	};
-	class hlc_rifle_akmgl: hlc_rifle_akm
-	{
-	};
-	class hlc_rifle_rpk: hlc_rifle_ak47
-	{
-		AGM_Bipod = 1;
-	};
-	class hlc_rifle_aks74_GL: hlc_rifle_aks74
-	{
-	};
-	class hlc_rifle_aek971: hlc_rifle_ak74
-	{
-	};
-	class hlc_rifle_saiga12k: hlc_rifle_ak47
-	{
-	};
-
-
-	// hlcweapons_ar15
-	class hlc_ar15_base: Rifle_Base_F
-	{
-	};
-	class hlc_rifle_RU556: hlc_ar15_base
-	{
-	};
-	class hlc_rifle_RU5562: hlc_rifle_RU556
-	{
-	};
-	class hlc_rifle_bcmjack: hlc_ar15_base
-	{
-	};
-	class hlc_rifle_Colt727: hlc_ar15_base
-	{
-	};
-	class hlc_rifle_Colt727_GL: hlc_rifle_Colt727
-	{
-	};
-	class hlc_rifle_Bushmaster300: hlc_rifle_Colt727
-	{
-	};
-	class hlc_rifle_vendimus: hlc_rifle_Bushmaster300
-	{
-	};
-	class hlc_rifle_SAMR: hlc_rifle_RU556
-	{
-		AGM_Bipod = 1;
-	};
-	class hlc_rifle_samr2: hlc_rifle_SAMR
-	{
-	};
-	class hlc_rifle_honeybase: hlc_rifle_RU556
-	{
-	};
-	class hlc_rifle_honeybadger: hlc_rifle_honeybase
-	{
-	};
-
-
-	// hlcweapons_m14
-	class hlc_M14_base: Rifle_Base_F
-	{
-	};
-	class hlc_rifle_M14: hlc_M14_base
-	{
-	};
-	class hlc_rifle_M21: hlc_M14_base
-	{
-		AGM_Bipod = 1;
-	};
-	class hlc_rifle_m14dmr: hlc_rifle_M21
-	{
-		AGM_Bipod = 1;
-	};
-	class hlc_rifle_m14sopmod: hlc_rifle_M14
 	{
 	};
 };
