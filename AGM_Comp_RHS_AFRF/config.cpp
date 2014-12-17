@@ -3,11 +3,20 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.1;
-    requiredAddons[] = {rhs_c_weapons};
+    requiredAddons[] = {rhs_c_weapons, RHS_A2_CarsImport};
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
     author[] = {"KoffeinFlummi", "CAA-Picard"};
+  };
+};
+
+class CfgVehicles {
+
+  class RHS_Ural_BaseTurret;
+  class RHS_Ural_Base: RHS_Ural_BaseTurret {
+    AGM_Wheels[] = {"HitLFWheel", "HitRFWheel", "HitLMWheel", "HitRMWheel", "HitLF2Wheel", "HitRF2Wheel"};
+    AGM_WheelsLocalized[] = {STR_AGM_Repair_HitLFWheel, STR_AGM_Repair_HitRFWheel, STR_AGM_Repair_HitLMWheel, STR_AGM_Repair_HitRMWheel, STR_AGM_Repair_HitLBWheel, STR_AGM_Repair_HitRBWheel};
   };
 };
 
