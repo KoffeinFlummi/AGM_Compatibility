@@ -7,7 +7,7 @@ class CfgPatches {
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
-    author[] = {"CAA-Picard"};
+    author[] = {"CAA-Picard", "Jonpas"};
     authorUrl = "https://github.com/esteldunedain/";
   };
 };
