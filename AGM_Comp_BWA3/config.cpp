@@ -25,6 +25,58 @@ class CfgWeapons {
       passThrough = 0.75;
     };
   };
+
+
+  class optic_Hamr; // listen, it's not my fault the bwmod's config is shit. Oh wait, it is.
+  class InventoryOpticsItem_Base_F;
+  class BWA3_optic_20x50: optic_Hamr {
+    AGM_ScopeAdjust_Horizontal[] = {-5,5};
+    AGM_ScopeAdjust_Vertical[] = {-20,20};
+    class ItemInfo: InventoryOpticsItem_Base_F {
+      class OpticsModes {
+        class Scope {
+          discreteDistance[] = {1};
+          discreteDistanceInitIndex = 0;
+        };
+      };
+    };
+  };
+  class BWA3_optic_20x50_NSV: BWA3_optic_20x50 {
+    AGM_ScopeAdjust_Horizontal[] = {-5,5};
+    AGM_ScopeAdjust_Vertical[] = {-20,20};
+    class ItemInfo: InventoryOpticsItem_Base_F {
+      class OpticsModes {
+        class Scope {
+          discreteDistance[] = {1};
+          discreteDistanceInitIndex = 0;
+        };
+      };
+    };
+  };
+  class BWA3_optic_24x72: optic_Hamr {
+    AGM_ScopeAdjust_Horizontal[] = {-40,40};
+    AGM_ScopeAdjust_Vertical[] = {-60,60};
+    class ItemInfo: InventoryOpticsItem_Base_F {
+      class OpticsModes {
+        class Scope {
+          discreteDistance[] = {1};
+          discreteDistanceInitIndex = 0;
+        };
+      };
+    };
+  };
+  class BWA3_optic_24x72_NSV: BWA3_optic_20x50 {
+    AGM_ScopeAdjust_Horizontal[] = {-40,40};
+    AGM_ScopeAdjust_Vertical[] = {-60,60};
+    class ItemInfo: InventoryOpticsItem_Base_F {
+      class OpticsModes {
+        class Scope {
+          discreteDistance[] = {1};
+          discreteDistanceInitIndex = 0;
+        };
+      };
+    };
+  };
 };
 
 class CfgVehicles {
