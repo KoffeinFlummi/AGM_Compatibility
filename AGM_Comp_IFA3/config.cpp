@@ -11,7 +11,7 @@ class CfgPatches {
   };
 };
 
-class cfgAmmo {
+class CfgAmmo {
   class BulletBase;
 
   class B_9x18_Ball: BulletBase{};
@@ -49,7 +49,7 @@ class cfgAmmo {
   };
 };
 
-class cfgWeapons {
+class CfgWeapons {
   class Default;
   class PistolCore;
   class RifleCore;
@@ -290,7 +290,7 @@ class cfgWeapons {
   };
 };
 
-class cfgVehicles {
+class CfgVehicles {
   class Tank;
   class LIB_tank_base : Tank {
     AGM_FCSEnabled = 0;
