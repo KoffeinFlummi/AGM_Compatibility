@@ -31,6 +31,7 @@ import subprocess
 import winreg
 import threading
 import time
+import csv
 
 PROJECTNAME = "AGM Compatibility"
 AUTHORS = ["KoffeinFlummi", "sutt0n"]
@@ -63,8 +64,8 @@ class Binarizer:
       if inp != "":
         self.paths[k] = inp
 
-  def get_modules(self):
-    if len(sys.argv) > 1:
+  def get_modules(self, check = False):
+    if len(sys.argv) > 1 and not check:
       return sys.argv[1:]
 
     # Nothing was specifed, binarize all new PBOs.
@@ -76,6 +77,9 @@ class Binarizer:
           self.check_for_changes(module) and \
           not os.path.exists(os.path.join(root, module, ".DONTPACK")):
         modules.append(module)
+
+    if len(sys.argv) > 1 and check:
+      modules = list(filter(lambda x: x in sys.argv, modules))
 
     return modules
 
@@ -232,7 +236,7 @@ class Binarizer:
     return len(modules)
 
   def verify(self):
-    newmodules = self.get_modules()
+    newmodules = self.get_modules(True)
     if len(newmodules) == 0:
       return 0
     else:
@@ -240,11 +244,22 @@ class Binarizer:
       print(", ".join(newmodules))
       return len(newmodules)
 
+def get_processes():
+  tasklist = subprocess.Popen("tasklist.exe /fo csv", stdout=subprocess.PIPE, universal_newlines=True)
+  tasklist = tasklist.stdout.read()
+  tasklist = tasklist.split("\n")
+  tasklist = list(map(lambda x: x.split(",")[0][1:-1].lower(), tasklist))
+  tasklist = list(filter(lambda x: x[-4:] == ".exe", tasklist))
+  return tasklist
+
 def main():
   if getattr(sys, "frozen", False):
     scriptpath = os.path.dirname(sys.executable)
   else:
     scriptpath = os.path.realpath(__file__)
+
+  if "steam.exe" not in get_processes():
+    print("WARNING: Steam is not running. Build will most likely fail.\n")
 
   print("{} Binarizer".format(PROJECTNAME))
   print("Authors: {}".format(", ".join(AUTHORS)))
@@ -282,6 +297,8 @@ def main():
     else:
       result = "\33[31m" + result + "\33[39m"
     print(result)
+  print("")
+  print("[Finished at {}]".format(time.ctime()))
 
   if getattr(sys, "frozen", False):
     input("\nPress any key to exit...\n")
