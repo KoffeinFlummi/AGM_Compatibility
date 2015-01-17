@@ -69,14 +69,14 @@ class CfgWeapons {
   class LIB_LMG;
   class LIB_MLMG;
 
-/*
+  /*
   class LIB_P38 : LIB_PISTOL {
   class LIB_M1908 : LIB_P38 {
   class LIB_TT33 : LIB_M1908 {
   class LIB_M1895 : LIB_M1908 {
   class LIB_FLARE_PISTOL : LIB_PISTOL {
   class LIB_Colt_M1911: LIB_P38 {
-*/
+  */
 
   class LIB_MP40 : LIB_SMG {
     AGM_Overheating_Dispersion[] = {0, 0.001, 0.002, 0.004};
@@ -223,7 +223,7 @@ class CfgWeapons {
     AGM_Backblast_Angle = 60;
     AGM_Backblast_Range = 15;
     AGM_Backblast_Damage = 0.7;
-};
+  };
 
 
   // PzKpfw VI Ausf.B + PzKpfw VI Ausf.E
@@ -309,6 +309,5 @@ class CfgVehicles {
   class LIB_US_Soldier_Base;
   class LIB_US_pilot: LIB_US_Soldier_Base {
     AGM_GForceCoef = 0.75;
-  }
-
+  };
 };
