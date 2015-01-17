@@ -187,10 +187,10 @@ class CfgWeapons {
 
 
   // Optics
+  class ItemCore;
   class InventoryOpticsItem_Base_F;
 
-  class rhsusf_acc_sniper_base;
-  class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+  class rhsusf_acc_sniper_base: ItemCore {
     AGM_ScopeAdjust_Horizontal[] = {-20, 20};
     AGM_ScopeAdjust_Vertical[] = {-30, 30};
     class ItemInfo: InventoryOpticsItem_Base_F {
