@@ -11,6 +11,23 @@ class CfgPatches {
   };
 };
 
+class CfgVehicles {
+  class Heli_Transport_01_base_F;
+  class Heli_Transport_02_base_F;
+  
+  // UH-60
+  class RHS_UH60_Base: Heli_Transport_01_base_F {
+    AGM_FastRoping = 1;
+    AGM_FastRoping_Positions[] = {{1.45, 1.925, -0.45}};
+  };
+
+  // CH-47F
+  class RHS_CH_47F_base: Heli_Transport_02_base_F {
+    AGM_FastRoping = 1;
+    AGM_FastRoping_Positions[] = {{0,-0.7,-3.2}, {0, -7, -1}};
+  };
+};
+
 class CfgAmmo {
   class BulletBase;
   class B_556x45_Ball;

@@ -17,6 +17,31 @@ class CfgVehicles {
     AGM_Wheels[] = {"HitLFWheel", "HitRFWheel", "HitLMWheel", "HitRMWheel", "HitLF2Wheel", "HitRF2Wheel"};
     AGM_WheelsLocalized[] = {STR_AGM_Repair_HitLFWheel, STR_AGM_Repair_HitRFWheel, STR_AGM_Repair_HitLMWheel, STR_AGM_Repair_HitRMWheel, STR_AGM_Repair_HitLBWheel, STR_AGM_Repair_HitRBWheel};
   };
+  
+  class Heli_Attack_02_base_F;
+  class Heli_Light_02_base_F;
+  
+  // Mi-24P
+  class RHS_Mi24_base: Heli_Attack_02_base_F {
+    AGM_FastRoping = 1;
+    AGM_FastRoping_Positions[] = {{1.7, 2.9, -0.4}, {-0.5, 2.9, -0.4}};
+  };
+  // Mi-24V, Mi-24VT (inherits)
+  class RHS_Mi24V_Base: RHS_Mi24_base {
+    AGM_FastRoping = 1;
+    AGM_FastRoping_Positions[] = {{1, 2.9, -0.4}, {-1.2, 2.9, -0.4}};
+  };
+  
+  // Mi-8 (Base)
+  class RHS_Mi8_base: Heli_Light_02_base_F {
+    AGM_FastRoping = 0;
+  };
+  
+  // Mi-8MTV-3, Mi-8AMTSh (inherits)
+  class rhs_mi8mtv3_base: RHS_Mi8_base {
+    AGM_FastRoping = 1;
+    AGM_FastRoping_Positions[] = {{-1.25, 5.1, -0.9}};
+  };
 };
 
 class CfgAmmo {
