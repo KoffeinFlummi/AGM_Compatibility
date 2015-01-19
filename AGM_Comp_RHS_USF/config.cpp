@@ -92,7 +92,7 @@ class CfgWeapons {
   class rhs_M249_base: LMG_Mk200_F {
     AGM_Overheating_allowSwapBarrel = 1;
     AGM_Overheating_JamChance[] = {0, 0.00004, 0.0002, 0.0011}; //23400 MRBS
-    AGM_Bipod = 0;
+    AGM_Bipod = 1;
   };
   class rhs_weap_m249_pip: rhs_M249_base {};
   class rhs_weap_m249_pip_elcan: rhs_weap_m249_pip {};
