@@ -3,7 +3,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.1;
-    requiredAddons[] = {rhs_c_weapons, rhs_c_a2port_car, rhs_c_a2port_air};
+    requiredAddons[] = {rhs_c_a2port_car, rhs_c_a2port_air, rhs_c_troops, rhs_c_weapons};
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
@@ -17,6 +17,7 @@ class CfgVehicles {
     AGM_Wheels[] = {"HitLFWheel", "HitRFWheel", "HitLMWheel", "HitRMWheel", "HitLF2Wheel", "HitRF2Wheel"};
     AGM_WheelsLocalized[] = {STR_AGM_Repair_HitLFWheel, STR_AGM_Repair_HitRFWheel, STR_AGM_Repair_HitLMWheel, STR_AGM_Repair_HitRMWheel, STR_AGM_Repair_HitLBWheel, STR_AGM_Repair_HitRBWheel};
   };
+  
   
   class Heli_Attack_02_base_F;
   class Heli_Light_02_base_F;
@@ -41,6 +42,12 @@ class CfgVehicles {
   class rhs_mi8mtv3_base: RHS_Mi8_base {
     AGM_FastRoping = 1;
     AGM_FastRoping_Positions[] = {{-1.25, 5.1, -0.9}};
+  };
+  
+  
+  class rhs_infantry_msv_base;
+  class rhs_pilot_base: rhs_infantry_msv_base {
+    AGM_GForceCoef = 0.55;
   };
 };
 
@@ -128,4 +135,10 @@ class CfgWeapons {
     AGM_Bipod = 1;
   };
   class rhs_weap_rpk74: rhs_weap_rpk74m {};
+  
+  
+  class rhs_uniform_flora;
+  class rhs_uniform_df15: rhs_uniform_flora {
+    AGM_GForceCoef = 0.8;
+  };
 };
