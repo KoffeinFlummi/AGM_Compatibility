@@ -3,7 +3,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.1;
-    requiredAddons[] = {rhsusf_c_weapons, rhsusf_c_a2port_air};
+    requiredAddons[] = {rhsusf_c_weapons, RHS_US_A2_AirImport};
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
