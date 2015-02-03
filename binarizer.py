@@ -33,7 +33,7 @@ import threading
 import time
 import csv
 
-PROJECTNAME = "AGM Compatibility"
+PROJECTNAME = "AGM_Compatibility"
 AUTHORS = ["KoffeinFlummi", "sutt0n"]
 
 class Binarizer:
