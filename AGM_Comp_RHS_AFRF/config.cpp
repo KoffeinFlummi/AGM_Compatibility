@@ -141,4 +141,28 @@ class CfgWeapons {
   class rhs_uniform_df15: rhs_uniform_flora {
     AGM_GForceCoef = 0.8;
   };
+  
+  
+  // Optics
+  class InventoryOpticsItem_Base_F;
+  
+  // 2 entries due to different inheritance of the scope and optics mode
+  // Scope inheritance in attachment class
+  class rhs_acc_sniper_base;
+    class rhs_acc_pso1m2: rhs_acc_sniper_base {
+      AGM_ScopeAdjust_Horizontal[] = {-20, 20};
+      AGM_ScopeAdjust_Vertical[] = {-30, 30};
+    };
+  // Optics inheritance in attachment's base class
+  class ItemCore;
+  class rhs_acc_sniper_base: ItemCore {
+    class ItemInfo: InventoryOpticsItem_Base_F {
+      class OpticsModes {
+        class pso1_scope {
+          discreteDistance[] = {1};
+          discreteDistanceInitIndex = 0;
+        };
+      };
+    };
+  };
 };
