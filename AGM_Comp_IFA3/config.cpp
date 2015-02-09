@@ -7,45 +7,55 @@ class CfgPatches {
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
-    author[] = {"Fadi"};
+    author[] = {"Fadi", "KoffeinFlummi"};
   };
 };
 
 class CfgAmmo {
   class BulletBase;
-
+  class RocketBase;
   class B_9x18_Ball: BulletBase{};
 
+  // Germany
   class LIB_B_9x19_Ball: B_9x18_Ball {
     AGM_BulletMass = 7.45;    // 9×19mm Parabellum
+    audibleFire = 5;
   };
-
   class B_792x57_Ball: BulletBase {
     AGM_BulletMass = 12.8;    // 7.92x57 Mauser RWS ID Classic
+    audibleFire = 9;
   };
-
   class B_792x33_Ball: BulletBase {
     AGM_BulletMass = 8.0;     // 7.92×33mm Kurz
+    audibleFire = 9;
+  };
+  class LIB_R_88mm_RPzB: RocketBase {
+    audibleFire = 32;         // Panzerschreck
   };
 
+  // Russia
   class B_762x25_Ball: BulletBase {
     AGM_BulletMass = 5.5;     // 7.62×25mm Tokarev FMJ
+    audibleFire = 9;
   };
-
   class LIB_B_762x54_Ball: BulletBase {
     AGM_BulletMass = 11.7;    // 7.62x54 FMJ
+    audibleFire = 9;
   };
 
+  // US
+  class LIB_B_45ACP_Ball: BulletBase {
+    audibleFire = 9;          // M1911
+  };
   class B_762x63_Ball: BulletBase {
     AGM_BulletMass = 11;      // .30-06 Springfield AKA 7.62x63
+    audibleFire = 9;
   };
-
   class B_762x33_Ball: B_762x63_Ball {
     AGM_BulletMass = 7;       // .30 Carbine AKA 7.62x33
   };
-
-  class B_127x99_Ball: BulletBase {
-    AGM_BulletMass = 42;      // 12.7x99mm NATO (.50 BMG)
+  class LIB_60mm_M6: RocketBase {
+    audibleFire = 32;         // Bazooka
   };
 };
 
