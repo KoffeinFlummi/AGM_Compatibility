@@ -131,10 +131,16 @@ class CfgWeapons {
   // Optics
   class InventoryOpticsItem_Base_F;
 
+  // 2 entries due to different inheritance of the scope and optics mode
+  // Scope inheritance in attachment class
   class rhsusf_acc_sniper_base;
   class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
     AGM_ScopeAdjust_Horizontal[] = {-20, 20};
     AGM_ScopeAdjust_Vertical[] = {-30, 30};
+  };
+  // Optics inheritance in attachment's base class
+  class ItemCore;
+  class rhsusf_acc_sniper_base: ItemCore {
     class ItemInfo: InventoryOpticsItem_Base_F {
       class OpticsModes {
         class pso1_scope {
