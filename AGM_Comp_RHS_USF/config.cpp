@@ -14,7 +14,7 @@ class CfgPatches {
 class CfgVehicles {
   class Heli_Transport_01_base_F;
   class Heli_Transport_02_base_F;
-  
+
   // UH-60
   class RHS_UH60_Base: Heli_Transport_01_base_F {
     AGM_FastRoping = 1;
@@ -63,7 +63,7 @@ class CfgWeapons {
   class LMG_Mk200_F;
 
   class rhs_weap_M320_Base_F: Rifle_Base_F {};
-  
+
   class rhs_weap_M320: rhs_weap_M320_Base_F {};
 
   class arifle_MX_Base_F: Rifle_Base_F {};
@@ -126,19 +126,11 @@ class CfgWeapons {
     AGM_Bipod = 1;
   };
   class rhs_weap_m14ebrri_leu: rhs_weap_m14ebrri {};
-  
+
 
   // Optics
   class InventoryOpticsItem_Base_F;
 
-  // 2 entries due to different inheritance of the scope and optics mode
-  // Scope inheritance in attachment class
-  class rhsusf_acc_sniper_base;
-  class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
-    AGM_ScopeAdjust_Horizontal[] = {-20, 20};
-    AGM_ScopeAdjust_Vertical[] = {-30, 30};
-  };
-  // Optics inheritance in attachment's base class
   class ItemCore;
   class rhsusf_acc_sniper_base: ItemCore {
     class ItemInfo: InventoryOpticsItem_Base_F {
@@ -151,8 +143,11 @@ class CfgWeapons {
     };
   };
 
-  class optic_LRPS;
-  class rhsusf_acc_LEUPOLDMK4_2: optic_LRPS {
+  class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+    AGM_ScopeAdjust_Horizontal[] = {-20, 20};
+    AGM_ScopeAdjust_Vertical[] = {-30, 30};
+  };
+  class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
     AGM_ScopeAdjust_Horizontal[] = {-50, 50};
     AGM_ScopeAdjust_Vertical[] = {-70, 70};
     class ItemInfo: InventoryOpticsItem_Base_F {

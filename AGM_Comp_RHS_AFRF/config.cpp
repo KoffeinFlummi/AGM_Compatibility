@@ -17,11 +17,11 @@ class CfgVehicles {
     AGM_Wheels[] = {"HitLFWheel", "HitRFWheel", "HitLMWheel", "HitRMWheel", "HitLF2Wheel", "HitRF2Wheel"};
     AGM_WheelsLocalized[] = {STR_AGM_Repair_HitLFWheel, STR_AGM_Repair_HitRFWheel, STR_AGM_Repair_HitLMWheel, STR_AGM_Repair_HitRMWheel, STR_AGM_Repair_HitLBWheel, STR_AGM_Repair_HitRBWheel};
   };
-  
-  
+
+
   class Heli_Attack_02_base_F;
   class Heli_Light_02_base_F;
-  
+
   // Mi-24P
   class RHS_Mi24_base: Heli_Attack_02_base_F {
     AGM_FastRoping = 1;
@@ -32,19 +32,19 @@ class CfgVehicles {
     AGM_FastRoping = 1;
     AGM_FastRoping_Positions[] = {{1, 2.9, -0.4}, {-1.2, 2.9, -0.4}};
   };
-  
+
   // Mi-8 (Base)
   class RHS_Mi8_base: Heli_Light_02_base_F {
     AGM_FastRoping = 0;
   };
-  
+
   // Mi-8MTV-3, Mi-8AMTSh (inherits)
   class rhs_mi8mtv3_base: RHS_Mi8_base {
     AGM_FastRoping = 1;
     AGM_FastRoping_Positions[] = {{-1.25, 5.1, -0.9}};
   };
-  
-  
+
+
   class rhs_infantry_msv_base;
   class rhs_pilot_base: rhs_infantry_msv_base {
     AGM_GForceCoef = 0.55;
@@ -79,7 +79,7 @@ class CfgAmmo {
   class rhs_B_762x54_7N1_Ball: rhs_B_762x54_Ball {
     AGM_BulletMass = 9.8;      // 7.62x54 7N1
   };
-  
+
   class rhs_B_762x39_Ball: B_762x51_Ball {
     AGM_BulletMass = 7.9;      // 7.62x39 57-N-231
   };
@@ -135,26 +135,19 @@ class CfgWeapons {
     AGM_Bipod = 1;
   };
   class rhs_weap_rpk74: rhs_weap_rpk74m {};
-  
-  
+
+
   class rhs_uniform_flora;
   class rhs_uniform_df15: rhs_uniform_flora {
     AGM_GForceCoef = 0.8;
   };
-  
-  
+
+
   // Optics
-  class InventoryOpticsItem_Base_F;
-  
-  // 2 entries due to different inheritance of the scope and optics mode
-  // Scope inheritance in attachment class
-  class rhs_acc_sniper_base;
-    class rhs_acc_pso1m2: rhs_acc_sniper_base {
-      AGM_ScopeAdjust_Horizontal[] = {-20, 20};
-      AGM_ScopeAdjust_Vertical[] = {-30, 30};
-    };
-  // Optics inheritance in attachment's base class
   class ItemCore;
+  class InventoryOpticsItem_Base_F;
+
+  // The base class basically is the PSO1, slightly weird config...
   class rhs_acc_sniper_base: ItemCore {
     class ItemInfo: InventoryOpticsItem_Base_F {
       class OpticsModes {
@@ -164,5 +157,9 @@ class CfgWeapons {
         };
       };
     };
+  };
+  class rhs_acc_pso1m2: rhs_acc_sniper_base {
+    AGM_ScopeAdjust_Horizontal[] = {-20, 20};
+    AGM_ScopeAdjust_Vertical[] = {-30, 30};
   };
 };
