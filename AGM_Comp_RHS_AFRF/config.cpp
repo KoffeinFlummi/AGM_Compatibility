@@ -22,6 +22,11 @@ class CfgVehicles {
   class Heli_Attack_02_base_F;
   class Heli_Light_02_base_F;
 
+  // Ka-52
+  class RHS_Ka52_base: Heli_Attack_02_base_F {
+    AGM_FastRoping = 0;
+  };
+
   // Mi-24P
   class RHS_Mi24_base: Heli_Attack_02_base_F {
     AGM_FastRoping = 1;
