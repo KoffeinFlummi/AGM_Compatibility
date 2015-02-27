@@ -3,7 +3,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.1;
-    requiredAddons[] = {AGM_Comp_CUP_Weapons_Ammunition, CUP_Weapons_Ammunition,CUP_Weapons_Igla};
+    requiredAddons[] = {CUP_Weapons_Igla};
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
@@ -15,10 +15,7 @@ class CfgPatches {
 class CfgWeapons {
   class Launcher_Base_F;
   // CUP_Weapons_Igla
-  // Requires adjusting to realistic values
   class CUP_launch_Igla: Launcher_Base_F {
-    AGM_Backblast_Angle = 45;
-    AGM_Backblast_Range = 100;
-    AGM_Backblast_Damage = 0.7;
+    AGM_Backblast_Damage = 0; // Soft launch
   };
 };
