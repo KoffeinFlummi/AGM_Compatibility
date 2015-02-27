@@ -1,14 +1,14 @@
 class CfgPatches {
   class AGM_Comp_CUP_Weapons_Igla {
     units[] = {};
-	weapons[] = {};
-	requiredVersion = 0.1;
-	requiredAddons[] = {AGM_Comp_CUP_Weapons_Ammunition, CUP_Weapons_Ammunition,CUP_Weapons_Igla};
-	version = "1.0";
-	versionStr = "1.0";
-	versionAr[] = {1,0,0};
-	author[] = {"Winter"};
-	authorUrl = "https://github.com/Winter259";
+    weapons[] = {};
+    requiredVersion = 0.1;
+    requiredAddons[] = {AGM_Comp_CUP_Weapons_Ammunition, CUP_Weapons_Ammunition,CUP_Weapons_Igla};
+    version = "1.0";
+    versionStr = "1.0";
+    versionAr[] = {1,0,0};
+    author[] = {"Winter"};
+    authorUrl = "https://github.com/Winter259";
   };
 };
 
