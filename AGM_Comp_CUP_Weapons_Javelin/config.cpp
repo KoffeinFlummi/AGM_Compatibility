@@ -4,9 +4,9 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = 0.1;
     requiredAddons[] = {CUP_Weapons_Javelin};
-    version = "1.1";
-    versionStr = "1.1";
-    versionAr[] = {1,1,0};
+    version = "1.0";
+    versionStr = "1.0";
+    versionAr[] = {1,0,0};
     author[] = {"Winter"};
     authorUrl = "https://github.com/Winter259";
   };
