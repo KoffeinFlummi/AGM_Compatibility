@@ -17,7 +17,7 @@ class CfgWeapons {
   // CUP_Weapons_MAAWS
   class CUP_launch_MAAWS: Launcher_Base_F {
     AGM_Backblast_Angle = 60;
-    AGM_Backblast_Range = 50;
+    AGM_Backblast_Range = 28;
     AGM_Backblast_Damage = 0.7;
   };
   class CUP_launch_MAAWS_Scope: CUP_launch_MAAWS {};
