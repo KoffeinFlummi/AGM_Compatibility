@@ -3,7 +3,7 @@ class CfgPatches {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.1;
-    requiredAddons[] = {AGM_Comp_CUP_Weapons_Ammunition, CUP_Weapons_Ammunition,CUP_Weapons_RPG18};
+    requiredAddons[] = {CUP_Weapons_Ammunition,CUP_Weapons_RPG18};
     version = "1.0";
     versionStr = "1.0";
     versionAr[] = {1,0,0};
