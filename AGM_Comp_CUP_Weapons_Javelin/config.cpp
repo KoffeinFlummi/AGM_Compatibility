@@ -16,7 +16,9 @@ class CfgWeapons {
   class Launcher_Base_F;
   // CUP_Weapons_Javelin
   class CUP_launch_Javelin: Launcher_Base_F {
-    AGM_Backblast_Range = 0; // Javelin is soft launch
+    AGM_Backblast_Angle = 30;
+    AGM_Backblast_Range = 2;
+    AGM_Backblast_Damage = 0.5;
     AGM_enableTopDownAttack = 1;
   };
 };
