@@ -16,6 +16,8 @@ class CfgWeapons {
   class Launcher_Base_F;
   // CUP_Weapons_Igla
   class CUP_launch_Igla: Launcher_Base_F {
-    AGM_Backblast_Damage = 0; // Soft launch
+    AGM_Backblast_Angle = 30;
+    AGM_Backblast_Range = 2;
+    AGM_Backblast_Damage = 0.5;
   };
 };

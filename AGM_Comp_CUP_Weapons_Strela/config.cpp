@@ -16,8 +16,8 @@ class CfgWeapons {
   class Launcher_Base_F;
   // CUP_Weapons_Strela_2
   class CUP_launch_9K32Strela: Launcher_Base_F {
-    AGM_Backblast_Angle = 45;
-    AGM_Backblast_Range = 15;
-    AGM_Backblast_Damage = 0.3; // Similar to stinger, could not find a reference.
+    AGM_Backblast_Angle = 30;
+    AGM_Backblast_Range = 2;
+    AGM_Backblast_Damage = 0.5;
   };
 };

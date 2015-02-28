@@ -16,7 +16,9 @@ class CfgWeapons {
   class Launcher_Base_F;
   // CUP_Weapons_NLAW
   class CUP_launch_NLAW: Launcher_Base_F {
-    AGM_Backblast_Damage = 0; // Soft launch
+    AGM_Backblast_Angle = 30;
+    AGM_Backblast_Range = 2;
+    AGM_Backblast_Damage = 0.5;
     AGM_UsedTube = "AGM_launch_NLAW_Used_F_CUP"; // The class name of the used tube.
     magazines[] = {"AGM_PreloadedMissileDummy_CUP"}; // The dummy magazine
   };
